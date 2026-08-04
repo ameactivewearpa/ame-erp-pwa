@@ -1,166 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
 
-<title>AMÉ ERP</title>
+  <meta
+    name="apple-mobile-web-app-title"
+    content="AMÉ ERP"
+  >
 
-<script>
-  function estaAbiertoComoApp() {
-    return (
-      window.navigator.standalone === true ||
-      window.matchMedia("(display-mode: standalone)").matches
-    );
-  }
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="default"
+  >
 
-  const URL_ERP =
-    "https://script.google.com/macros/s/AKfycbzc-wSzV5MQBjFfD2_WZ-3NhiYEiXcDOirYTcWrDA495hHv0w4y023Sti7i_OCQS1De/exec";
+  <meta
+    name="theme-color"
+    content="#f4ede5"
+  >
 
-  window.addEventListener("load", function () {
-    if (estaAbiertoComoApp()) {
-      setTimeout(function () {
-        window.location.replace(URL_ERP);
-      }, 600);
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="https://res.cloudinary.com/ptytz9os/image/upload/v1785734766/ame-apple-touch-icon-180_zvgozb.png"
+  >
+
+  <link
+    rel="manifest"
+    href="./manifest.webmanifest"
+  >
+
+  <title>AMÉ ERP</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
     }
-  });
 
-  function abrirERP() {
-    window.location.href = URL_ERP;
-  }
-</script>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #f4ede5;
+    }
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  html,
-  body {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-  }
-
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding:
-      max(24px, env(safe-area-inset-top))
-      24px
-      max(24px, env(safe-area-inset-bottom));
-    background: #f4ede5;
-    font-family: Arial, sans-serif;
-    color: #493f37;
-  }
-
-  .pantalla-inicio {
-    width: 100%;
-    max-width: 380px;
-    text-align: center;
-  }
-
-  .logo {
-    width: 138px;
-    height: 138px;
-    border-radius: 30px;
-    object-fit: cover;
-  }
-
-  h1 {
-    margin: 22px 0 10px;
-    font-size: 28px;
-  }
-
-  p {
-    margin: 0 auto 24px;
-    max-width: 310px;
-    line-height: 1.5;
-    color: #77695d;
-  }
-
-  button {
-    width: 100%;
-    min-height: 52px;
-    border: 0;
-    border-radius: 14px;
-    background: #c8a262;
-    color: #211b17;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-  }
-</style>
-
-
-<link
-  rel="manifest"
-  href="./manifest.webmanifest"
->
-
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="https://res.cloudinary.com/ptytz9os/image/upload/v1785734766/ame-apple-touch-icon-180_zvgozb.png"
->
-
-<meta
-  name="apple-mobile-web-app-capable"
-  content="yes"
->
-
-<meta
-  name="apple-mobile-web-app-title"
-  content="AMÉ ERP"
->
-
-<meta
-  name="apple-mobile-web-app-status-bar-style"
-  content="default"
->
-
-<meta
-  name="theme-color"
-  content="#f4ede5"
->
-
-  
+    #erpFrame {
+      display: block;
+      width: 100%;
+      height: 100dvh;
+      border: 0;
+      background: #f4ede5;
+    }
+  </style>
 </head>
 
 <body>
 
-  <main class="pantalla-inicio">
-
-    <img
-      class="logo"
-      src="https://res.cloudinary.com/ptytz9os/image/upload/v1785734766/ame-app-icon-512_iz2wjd.png"
-      alt="AMÉ Activewear"
-    >
-
-    <h1>AMÉ ERP</h1>
-
-    <p>
-      Agrega esta página a la pantalla de inicio
-      para acceder rápidamente al sistema.
-    </p>
-
-    <button
-      type="button"
-      onclick="abrirERP()"
-    >
-      Abrir ERP
-    </button>
-
-  </main>
+  <iframe
+    id="erpFrame"
+    src="https://script.google.com/macros/s/AKfycbzc-wSzV5MQBjFfD2_WZ-3NhiYEiXcDOirYTcWrDA495hHv0w4y023Sti7i_OCQS1De/exec"
+    title="AMÉ ERP"
+    allow="clipboard-write"
+  ></iframe>
 
 </body>
-
-
-  
 </html>
