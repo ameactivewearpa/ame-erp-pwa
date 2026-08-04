@@ -1,0 +1,25 @@
+{
+  "name": "AMÉ ERP",
+  "short_name": "AMÉ ERP",
+  "description": "Sistema comercial de AMÉ Activewear",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4ede5",
+  "theme_color": "#f4ede5",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/ptytz9os/image/upload/v1785734766/ame-app-icon-192_xxzvfv.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://res.cloudinary.com/ptytz9os/image/upload/v1785734766/ame-app-icon-512_iz2wjd.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
